@@ -24,11 +24,12 @@ import (
 
 // template used for output as per Question
 
-const desiredTemplate = `{params: [{name: temperature, value: {{.Main.Temp}}}]}`
-
+const (
+	desiredTemplate = `{params: [{name: temperature, value: {{.Main.Temp}}}]}`
+	apiKey      = "e3a6589e82b161dd83124dd1fd211243"
+)
 // Pointers to hold the contents of the flag args.
 var (
-	apiKey      = "e3a6589e82b161dd83124dd1fd211243"
 	countryFlag = flag.String("country", "", "Location to get weather.  "+
 		"If country has a space, wrap the location in double quotes.")
 	cityFlag = flag.String("city", "", "If country has a space, wrap the location in double quotes.")
